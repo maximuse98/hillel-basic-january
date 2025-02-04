@@ -154,4 +154,33 @@ switch (c)
         break;
 }
 
-string str = "asd";
+//string str = "asd";
+
+// Тернарний оператор
+
+int age = 15;
+
+string description;
+
+if (age >= 18)
+{
+    description = "Adult";
+}
+else if (age < 12)
+{
+    description = "Child";
+}
+else
+{
+    description = "Teenager";
+}
+
+description = age >= 18 ? 
+                "Adult" : (age < 12 ? "Child" : "Teenager");
+
+description = age switch
+{
+    >= 18 => "Adult",
+    < 12 => "Child",
+    _ => "Teenager"
+};
